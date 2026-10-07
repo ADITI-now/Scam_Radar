@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from app.rules import check_rules
@@ -75,3 +76,11 @@ def check_message(message: JobMessage):
         "score": final_score,
         "reasons": reasons
     }
+
+
+# Serve ScamRadar frontend
+app.mount(
+    "/",
+    StaticFiles(directory="Frontend", html=True),
+    name="frontend"
+)
