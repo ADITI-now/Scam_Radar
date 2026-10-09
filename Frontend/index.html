@@ -1,128 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ScamRadar | Smart Scam Detection</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+<nav class="navbar">
+    <div class="logo"><span>◈</span> ScamRadar</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#how">How It Works</a>
+        <a href="#awareness">Awareness</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
 
-        <div class="logo">
-            <span>◈</span> ScamRadar
-        </div>
+<main class="hero">
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#how">How It Works</a>
-            <a href="#about">About</a>
-        </div>
+    <div class="badge">● AI-POWERED SCAM DETECTION</div>
 
-    </nav>
+    <h1>
+        Don't get scammed.<br>
+        <span>Check before you trust.</span>
+    </h1>
 
+    <p class="subtitle">
+        Analyze job and internship offers for suspicious patterns,
+        red flags and potential scams.
+    </p>
 
-    <!-- Hero Section -->
-    <main class="hero">
+    <div class="scanner-card">
 
-        <div class="badge">
-            ● AI-POWERED SCAM DETECTION
-        </div>
-
-        <h1>
-            Don't get scammed.<br>
-            <span>Check before you trust.</span>
-        </h1>
-
-        <p class="subtitle">
-            Analyze job and internship offers for suspicious patterns,
-            red flags and potential scams.
-        </p>
-
-
-        <!-- Scanner Card -->
-        <div class="scanner-card">
-
-            <div class="card-header">
-                <div>
-                    <h2>Analyze an Opportunity</h2>
-                    <p>Paste the job or internship message below.</p>
-                </div>
-
-                <div class="shield">
-                    ◈
-                </div>
+        <div class="card-header">
+            <div>
+                <h2>Analyze an Opportunity</h2>
+                <p>Paste the job or internship message below.</p>
             </div>
-
-
-            <textarea
-                id="message"
-                placeholder="Paste the job or internship offer here...">
-            </textarea>
-
-
-            <button id="checkButton">
-                <span>⚡</span> Analyze Offer
-            </button>
-
-
-            <div id="result"></div>
-
+            <div class="shield">◈</div>
         </div>
 
-
-        <!-- Features -->
-        <section class="features" id="how">
-
-            <div class="feature">
-                <div class="icon">🚩</div>
-                <h3>Red Flag Detection</h3>
-                <p>Finds suspicious patterns commonly found in scam offers.</p>
-            </div>
-
-            <div class="feature">
-                <div class="icon">🧠</div>
-                <h3>Smart Analysis</h3>
-                <p>Combines rule-based checks with machine learning.</p>
-            </div>
-
-            <div class="feature">
-                <div class="icon">⚡</div>
-                <h3>Instant Results</h3>
-                <p>Get a risk score and explanation within seconds.</p>
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer id="about">
-
-        <div class="footer-logo">
-            ◈ ScamRadar
+        <div class="sample-buttons">
+            <button type="button" id="fakeOfferButton">🚩 Try Fake Offer</button>
+            <button type="button" id="realOfferButton">✓ Try Real Offer</button>
         </div>
 
-        <p>
-            Helping students identify suspicious job and internship offers.
-        </p>
+        <textarea id="message"
+            placeholder="Paste the job or internship offer here..."></textarea>
 
-        <small>
-            ScamRadar © 2026
-        </small>
+        <button id="checkButton">
+            <span>⚡</span> Analyze Offer
+        </button>
 
-    </footer>
+        <div id="result"></div>
 
+        <div id="highlightSection" style="display:none;">
+            <h3>🔎 Red Flags Found in Message</h3>
+            <div id="highlightedText"></div>
+        </div>
 
-    <script src="script.js"></script>
+    </div>
+
+    <section class="features" id="how">
+
+        <div class="feature">
+            <div class="icon">🚩</div>
+            <h3>Red Flag Detection</h3>
+            <p>Finds suspicious patterns commonly found in scam offers.</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🧠</div>
+            <h3>Smart Analysis</h3>
+            <p>Combines rule-based checks with machine learning.</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">⚡</div>
+            <h3>Instant Results</h3>
+            <p>Get a risk score and explanation within seconds.</p>
+        </div>
+
+    </section>
+
+    <section class="features" id="awareness">
+
+        <div class="feature">
+            <div class="icon">🛡️</div>
+            <h3>Precautions Before Applying</h3>
+            <p>
+                ✓ Verify the company through its official website.<br>
+                ✓ Never pay registration or training fees.<br>
+                ✓ Check whether the recruiter uses an official company email.<br>
+                ✓ Be careful with guaranteed jobs or unrealistic salaries.<br>
+                ✓ Never share sensitive financial information.<br>
+                ✓ Avoid offers that pressure you to act immediately.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer id="about">
+    <div class="footer-logo">◈ ScamRadar</div>
+    <p>Helping students identify suspicious job and internship offers.</p>
+    <small>ScamRadar © 2026</small>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
